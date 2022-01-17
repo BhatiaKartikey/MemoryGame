@@ -22,7 +22,12 @@ function nextSequence()
     var audio = new Audio("sounds/" + randomchosencolour + ".mp3");
     audio.play();
     level++;
+    if(level>highscore)
+    {
+        highscore=level;
+    }
     $("#level-title").html(" Level : " + level).css("font-family","Lato");
+    $(".highscore h3").html("Highest Score = " + highscore);
 }
 function gameover()
 {
