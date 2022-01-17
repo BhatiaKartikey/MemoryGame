@@ -1,50 +1,87 @@
+@font-face {
+  font-family: Tangerine;
+  src: url("Tangerine-Bold.ttf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("Lato-Bold.ttf");
+}
+@keyframes borderc {
+  10%{border-color: rgb(160, 216, 71);}
+  30%{border-color: orange;}
+  50%{border-color:  rgb(244, 255, 83);}
+  70%{border-color: rgb(248, 120, 120);}
+  100%{border-color: cadetblue;}
+}
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #FFCC70;
+  background-image: linear-gradient(43deg, #FFCC70 0%,#4158D0 46%,#C850C0 100%); 
+  filter: brightness(90%);
 }
-
 #level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
+  font-family: 'Tangerine';
+  font-size: 6rem;
+  font-weight: 600;
   margin:  5%;
   color: #FEF2BF;
+  background: linear-gradient(to right, #ff8a00 0%, #dd4c4f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 2%;
+  margin: 2%;
+  margin-top: 0%;
 }
 
 .container {
   display: block;
   width: 50%;
   margin: auto;
-
+  border: 5px white solid;
+  box-shadow: 0px 5px 5px black;
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+  filter: brightness(120%);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, .25);
+  animation: borderc 4.7s linear infinite;
 }
-
 .btn {
   margin: 25px;
   display: inline-block;
   height: 200px;
   width: 200px;
+  box-shadow: 0px 4px 5px rgba(255, 255, 255, .5);
   border: 10px solid black;
   border-radius: 20%;
 }
 
 .game-over {
   background-color: red;
+  background-image: none;
   opacity: 0.8;
 }
 
 .red {
-  background-color: red;
+  /* background-color: red; */
+background: linear-gradient(45deg, #000850 0%, #000320 100%), radial-gradient(100% 225% at 100% 0%, #FF6928 0%, #000000 100%), linear-gradient(225deg, #FF7A00 0%, #000000 100%), linear-gradient(135deg, #CDFFEB 10%, #CDFFEB 35%, #009F9D 35%, #009F9D 60%, #07456F 60%, #07456F 67%, #0F0A3C 67%, #0F0A3C 100%);
+background-blend-mode: screen, overlay, hard-light, normal;
+
 }
 
 .green {
-  background-color: green;
+  background: linear-gradient(90deg, red 0% 16.67%, yellow 16.67% 33.33%, lime 33.33% 50%, cyan 50% 66.67%, blue 66.67% 83.33%, magenta 83.33% 100%), conic-gradient(from 180deg, red 0%, yellow 0 16.67%, lime 0 33.33%, cyan 0 50%, blue 0 66.67%, magenta 0 83.33%, red 0 100%);
+  background-blend-mode: screen, normal;
 }
 
 .blue {
-  background-color: blue;
+  background: linear-gradient(238.72deg, #FFC6C6 0%, #1F1818 100%), linear-gradient(301.28deg, #DB00FF 0%, #735A00 100%), linear-gradient(121.28deg, #207A00 0%, #950000 100%), linear-gradient(238.72deg, #FFB800 0%, #000000 100%), linear-gradient(238.72deg, #00D1FF 0%, #00FF38 100%), linear-gradient(58.72deg, #B80000 0%, #1B00C2 100%), linear-gradient(121.5deg, #00E0FF -0.26%, #87009D 100%), linear-gradient(263.7deg, #FF9900 3.43%, #740068 96.57%), linear-gradient(130.22deg, #DBFF00 18.02%, #3300FF 100%);
+  background-blend-mode: color-dodge, difference, color-dodge, difference, lighten, difference, color-dodge, difference, normal;
 }
 
 .yellow {
-  background-color: yellow;
+  background: radial-gradient(65% 100% at 50% 0%, #00FF94 0%, rgba(0, 255, 148, 0.25) 100%), linear-gradient(230deg, #000000 25%, #170059 100%), linear-gradient(215deg, #FFEBB9 10%, #19004E 80%), radial-gradient(100% 245% at 100% 100%, #FFFFFF 0%, #000353 100%), linear-gradient(125deg, #1400FF 0%, #3A0000 100%), linear-gradient(225deg, #00F0FF 30%, #000B6F 45%, #00EBFC 45%, #001676 65%, #00E1F6 65%, #001676 85%, #00ECFD 85%, #001676 100%), linear-gradient(135deg, #00F0FF 0%, #000B6F 15%, #00EBFC 15%, #001676 35%, #00E1F6 35%, #001676 55%, #00ECFD 55%, #001676 100%);
+  background-blend-mode: soft-light, screen, overlay, overlay, difference, overlay, normal;
 }
 
 .pressed {

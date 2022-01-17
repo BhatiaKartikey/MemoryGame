@@ -22,15 +22,15 @@ function nextSequence()
     var audio = new Audio("sounds/" + randomchosencolour + ".mp3");
     audio.play();
     level++;
-    $("#level-title").html(" Level : " + level);;
+    $("#level-title").html(" Level : " + level).css("font-family","Lato");
 }
 function gameover()
 {
     level=0;
-    $("#level-title").html(" GAME OVER. <br> PRESS A BUTTON TO RESTART ");
-    $(".bdy").css("background-color","red");
+    $("#level-title").html(" GAME OVER! Press A Button To Restart ").css({"font-family":"Roboto","font-size":"3rem"});
+    $(".container").addClass("game-over")
     setTimeout(function () {
-        $(".bdy").css("background-color","#011F3F");
+        $(".container").removeClass("game-over");
       }, 250);
     var audio = new Audio("sounds/wrong.mp3");
     audio.play();
