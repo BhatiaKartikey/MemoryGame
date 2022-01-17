@@ -1,5 +1,6 @@
 var gamepattern = [];
 level=0;
+highscore=0;
 var patternCount;
 function animation(hello) 
 {
